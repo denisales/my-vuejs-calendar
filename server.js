@@ -13,7 +13,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
 let events = [
-  {description: 'Denis', date: moment('2018-09-05', 'YYYY-MM-DD')}
+  {description: 'Denis', date: moment('2018-09-05', 'YYYY-MM-DD HH:mm:ss')}
 ]
 
 app.get('/', (req, res) => {

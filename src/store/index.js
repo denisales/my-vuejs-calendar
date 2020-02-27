@@ -11,8 +11,8 @@ import { isContext } from 'vm';
 
 export default new Vuex.Store({
     state: {
-        correntYear: 2018,
-        correntMonth: 9,
+        correntYear: moment().year(),
+        correntMonth: moment().month(),
         eventFormPosX: 0,
         eventFormPosY: 0,
         eventFormActive: false,
@@ -42,6 +42,7 @@ export default new Vuex.Store({
     },
     actions: {
         addEvent(context, payload) {
+            console.log(context)
             return new Promise((resolve, reject) => {
                 let obj = {
                     description: payload,
